@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Retrofont';
+    src: url("Alien-Encounters-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Retrofont', sans-serif;
+    font-size: 48px;
+}
