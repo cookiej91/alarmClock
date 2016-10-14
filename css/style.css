@@ -12,30 +12,29 @@
 body {
     font-family: 'Retrofont', sans-serif;
     font-size: 48px;
-    background: linear-gradient(10deg, #00FDF1, #FF00D6, #B686DF);
+    background: linear-gradient(180deg, #00fdf1, #ff00d6, #b686df);
     background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 29s ease infinite;
-    -moz-animation: AnimationName 29s ease infinite;
-    animation: AnimationName 29s ease infinite;
+    -webkit-animation: backgroundColourAnimation 30s ease infinite;
+    -moz-animation: backgroundColourAnimation 30s ease infinite;
+    animation: backgroundColourAnimation 30s ease infinite;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
+@-webkit-keyframes backgroundColourAnimation {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
-@-moz-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
+@-moz-keyframes backgroundColourAnimation {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
-@keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
+@keyframes backgroundColourAnimation {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
-
 #content {
     text-align: center;
 }
