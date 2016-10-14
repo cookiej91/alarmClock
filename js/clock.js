@@ -1,4 +1,4 @@
-setInterval(()=>{
+setInterval( _=>{
     var timeObj = new Date();
     time = {
         hours : checkTime(timeObj.getHours()),

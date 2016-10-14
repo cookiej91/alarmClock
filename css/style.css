@@ -12,4 +12,31 @@
 body {
     font-family: 'Retrofont', sans-serif;
     font-size: 48px;
+    background: linear-gradient(10deg, #38fbfd, #823df3, #ff13ec);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 29s ease infinite;
+    -moz-animation: AnimationName 29s ease infinite;
+    animation: AnimationName 29s ease infinite;
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+#content {
+    text-align: center;
 }
