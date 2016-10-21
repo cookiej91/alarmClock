@@ -3,6 +3,7 @@
         <title>Sleep Later</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/setLater.js"></script>
         <script type="text/javascript" src="../js/clock.js"></script>
     </head>
     <body>
@@ -12,7 +13,7 @@
                 <p>
                     Wake up at...
                 </p>
-                <select class="hour" id="dropdown">
+                <select class="dropdown" id="hour">
                         <option selected disabled hidden>(Hour)</option>
                         <option>1</option>
                         <option>2</option>
@@ -28,7 +29,7 @@
                         <option>12</option>
                 </select>
 
-                <select class="minute" id="dropdown">
+                <select class="dropdown" id="minute">
                         <option selected disabled hidden>(Minutes)</option>
                         <option>00</option>
                         <option>05</option>
@@ -44,13 +45,13 @@
                         <option>55</option>
                 </select>
 
-                <select class="ampm" id="dropdown">
+                <select class="dropdown" id="ampm">
                         <option>AM</option>
                         <option>PM</option>
                 </select>
                 <br />
                 <br />
-                <button id="setAlarm">
+                <button id="setAlarm" type="submit">
                     Set Alarm
                 </button>
             </div>

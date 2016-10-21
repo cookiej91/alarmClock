@@ -1,3 +1,4 @@
+/* retro style font added */
 @font-face {
     font-family: 'Retrofont';
     src: url("Alien-Encounters-Regular.ttf");
@@ -21,6 +22,8 @@ body {
     animation: backgroundColourAnimation 30s ease infinite;
 }
 
+/* background animations */
+
 @-webkit-keyframes backgroundColourAnimation {
     0%{background-position:51% 0%}
     50%{background-position:50% 100%}
@@ -36,11 +39,14 @@ body {
     50%{background-position:50% 100%}
     100%{background-position:51% 0%}
 }
+
+/* centering alarm set */
 #content {
     text-align: center;
 }
 
-#dropdown {
+/* dropdown selector */
+.dropdown {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 0 !important;
@@ -51,10 +57,12 @@ body {
     background-color: transparent;
 }
 
+/* Selector option text colour */
 option {
     color: black;
 }
 
+/* button for setting the alarm styling */
 #setAlarm {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;

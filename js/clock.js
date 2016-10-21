@@ -1,3 +1,4 @@
+//using an interval to keep checking the time and updating constantly
 setInterval( _=>{
     var timeObj = new Date();
     time = {
