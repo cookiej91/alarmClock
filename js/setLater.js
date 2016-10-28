@@ -12,18 +12,18 @@ var now = (time.hours + ":" + time.minutes + ":" + time.seconds);
 //need a way to parse information from setLater.html into a time object
 
 //setting wakeuptime object from the html inputs
-console.log("here");
 $('html').on('click', '#setAlarm', function() {
-    let wakeUpHours = ($('#hour').val());
-    let wakeUpMinutes = ($("#minute").val());
-    let amorpm = ($("#ampm").val());
-
+    var wakeUpHours = ($('#hour').val());
+    var wakeUpMinutes = ($("#minute").val());
+    var amorpm = ($("#ampm").val());
     if(wakeUpHours == null || wakeUpMinutes == null){
         alert("invalid time");
     } else {
         let formatHours = wakeUpHours < 10 ? "0" + wakeUpHours : wakeUpHours;
         alert( formatHours + ":" + wakeUpMinutes + amorpm );
+
     }
+    alert( hours + ":" + minutes);
 });
 
 // //time that the alarm will go off
@@ -31,6 +31,6 @@ $('html').on('click', '#setAlarm', function() {
 //
 // //if now == wakeUpTime { use sound to wake up }
 //
-// if (time.hours === wakeUpTime.hours && time.minutes === wakeUpTime.minutes){
-//     Alert("Wake up");
-// };
+if (time.hours === wakeUpTime.hours && time.minutes === wakeUpTime.minutes){
+    Alert("Wake up");
+};
