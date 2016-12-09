@@ -1,13 +1,9 @@
-//onclick setAlarm make noise when reaches that time
-//after achieved write logic to go off for the correct cycle (from the time you set the alarm)
-var audio = new Audio('Wake-up-sounds.mp3');
 var timeObj = new Date();
 time = {
     hours : (timeObj.getHours()),
     minutes : (timeObj.getMinutes()),
     seconds : (timeObj.getSeconds())
 }
-
 var now = (time.hours + ":" + time.minutes + ":" + time.seconds);
 
 //setting wakeuptime object from the html inputs
@@ -23,6 +19,7 @@ $('html').on('click', '#setAlarm', function() {
 });
 
 //alarm sounded - reloads on click of cancel
+var audio = new Audio('../sounds/Wake-up-sounds.mp3');
 setInterval( _=>{
     if (($('#hour').val()) == time.hours && ($('#minute').val()) == time.minutes){
         audio.play();
@@ -33,3 +30,9 @@ setInterval( _=>{
         })
     }
 }, 10);
+
+/* todo
+logic for REM sleep cycles to sound alarm either side as well as wake up time
+REM calculator
+HTML/CSS tool bar
+*/
