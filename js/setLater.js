@@ -1,5 +1,6 @@
 //onclick setAlarm make noise when reaches that time
 //after achieved write logic to go off for the correct cycle (from the time you set the alarm)
+var audio = new Audio('Wake-up-sounds.mp3');
 var timeObj = new Date();
 time = {
     hours : (timeObj.getHours()),
@@ -9,28 +10,26 @@ time = {
 
 var now = (time.hours + ":" + time.minutes + ":" + time.seconds);
 
-//need a way to parse information from setLater.html into a time object
-
 //setting wakeuptime object from the html inputs
 $('html').on('click', '#setAlarm', function() {
-    var wakeUpHours = ($('#hour').val());
-    var wakeUpMinutes = ($("#minute").val());
-    var amorpm = ($("#ampm").val());
+        var wakeUpHours = ($('#hour').val());
+        var wakeUpMinutes = ($("#minute").val());
     if(wakeUpHours == null || wakeUpMinutes == null){
         alert("invalid time");
     } else {
         let formatHours = wakeUpHours < 10 ? "0" + wakeUpHours : wakeUpHours;
-        alert( formatHours + ":" + wakeUpMinutes + amorpm );
-
-    }
-    alert( hours + ":" + minutes);
+        alert( formatHours + ":" + wakeUpMinutes);
+        };
 });
 
-// //time that the alarm will go off
-// var alarmTime = (wakeUpTime.hours + ":" + wakeUpTime.minutes);
-//
-// //if now == wakeUpTime { use sound to wake up }
-//
-if (time.hours === wakeUpTime.hours && time.minutes === wakeUpTime.minutes){
-    Alert("Wake up");
-};
+//alarm sounded - reloads on click of cancel
+setInterval( _=>{
+    if (($('#hour').val()) == time.hours && ($('#minute').val()) == time.minutes){
+        audio.play();
+        $('#setAlarm').text('Cancel');
+        $('html').on('click', '#setAlarm', function() {
+            audio.pause();
+            location.reload();
+        })
+    }
+}, 10);
