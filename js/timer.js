@@ -1,5 +1,5 @@
-var running = 0;
-var time = 0;
+let running = 0;
+let time = 0;
 
 function increment(){
     if(running == 1){
@@ -9,9 +9,6 @@ function increment(){
             let mins = Math.floor((time / 10) / 60);
             let secs = Math.floor(time/10);
             let tenths = time % 10;
-            console.log(mins);
-            console.log(secs);
-            console.log(tenths);
 
             if(mins < 10){
                 mins = "0" + mins;
@@ -39,8 +36,7 @@ $("#startPause").click(function() {
 
 $("#reset").click(function(){
     running = 0;
-    timer = 0;
+    time = 0;
     $("#output").html("00:00:00");
     $("#startPause").html("Start");
-
 });

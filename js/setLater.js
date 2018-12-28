@@ -1,15 +1,15 @@
-var timeObj = new Date();
+let timeObj = new Date();
 time = {
     hours : (timeObj.getHours()),
     minutes : (timeObj.getMinutes()),
     seconds : (timeObj.getSeconds())
 }
-var now = (time.hours + ":" + time.minutes + ":" + time.seconds);
+let now = (time.hours + ":" + time.minutes + ":" + time.seconds);
 
 //setting wakeuptime object from the html inputs
 $('html').on('click', '#setAlarm', function() {
-        var wakeUpHours = ($('#hour').val());
-        var wakeUpMinutes = ($("#minute").val());
+        let wakeUpHours = ($('#hour').val());
+        let wakeUpMinutes = ($("#minute").val());
     if(wakeUpHours == null || wakeUpMinutes == null){
         alert("invalid time");
     } else {
@@ -19,7 +19,7 @@ $('html').on('click', '#setAlarm', function() {
 });
 
 //alarm sounded - reloads on click of cancel
-var audio = new Audio('../sounds/Wake-up-sounds.mp3');
+let audio = new Audio('../sounds/Wake-up-sounds.mp3');
 setInterval( _=>{
     if (($('#hour').val()) == time.hours && ($('#minute').val()) == time.minutes){
         audio.play();
